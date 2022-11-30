@@ -6,7 +6,7 @@ ProductDatabaseController::ProductDatabaseController(
     : m_productDatabase(productDatabase),
       m_productDatabaseView(productDatabaseView) {}
 
-ProductController& ProductDatabaseController::getProductController(
+ProductController& ProductDatabaseController::getProductControllerById(
     unsigned long long id) {
   return m_productDatabase.getProductControllerById(id);
 }

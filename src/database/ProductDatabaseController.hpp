@@ -12,7 +12,7 @@ class ProductDatabaseController {
   ProductDatabaseController(const ProductDatabase& productDatabase,
                             const ProductDatabaseView& productDatabaseView);
 
-  ProductController& getProductController(unsigned long long id);
+  ProductController& getProductControllerById(unsigned long long id);
   void loadProductDatabaseFromFile(const std::string& file);
   void printProductDetails(unsigned long long id);
 };
