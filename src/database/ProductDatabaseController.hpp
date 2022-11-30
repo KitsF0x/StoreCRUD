@@ -1,5 +1,7 @@
 #pragma once
 
+#include <fstream>
+
 #include "ProductDatabase.hpp"
 #include "ProductDatabaseView.hpp"
 
@@ -14,6 +16,6 @@ class ProductDatabaseController {
 
   ProductController& getProductControllerById(unsigned long long id);
   void add(const ProductController& productController);
-  void loadProductDatabaseFromFile(const std::string& file);
+  void loadProductDatabaseFromFile(const std::string& filename);
   void printProductDetails(unsigned long long id);
 };

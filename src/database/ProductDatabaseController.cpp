@@ -17,8 +17,12 @@ void ProductDatabaseController::add(
 }
 
 void ProductDatabaseController::loadProductDatabaseFromFile(
-    const std::string& file) {
-  //
+    const std::string& filename) {
+  std::fstream file{filename, std::ios::in};
+  std::string temp;
+  while (std::getline(file, temp)) {
+    std::cout << temp << std::endl;
+  }
 }
 
 void ProductDatabaseController::printProductDetails(unsigned long long id) {
