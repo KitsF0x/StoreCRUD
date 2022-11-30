@@ -2,8 +2,10 @@
 
 // Constructors
 
-Product::Product(const std::string& name, const std::string& description,
-                 double price, unsigned long long amount) {
+Product::Product(unsigned long long id, const std::string& name,
+                 const std::string& description, double price,
+                 unsigned long long amount) {
+  m_id = id;
   setName(name);
   setDescription(description);
   setPrice(price);
@@ -25,3 +27,4 @@ std::string Product::getName() const { return m_name; }
 std::string Product::getDescription() const { return m_description; }
 double Product::getPrice() const { return m_price; }
 unsigned long long Product::getAmount() const { return m_amount; }
+unsigned long long Product::getId() const { return m_id; }

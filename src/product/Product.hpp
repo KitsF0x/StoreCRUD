@@ -8,9 +8,11 @@ class Product {
   std::string m_description;
   double m_price;
   unsigned long long m_amount;
+  unsigned long long m_id;
 
  public:
-  Product(const std::string& name, const std::string& description, double price,
+  Product(unsigned long long id, const std::string& name,
+          const std::string& description, double price,
           unsigned long long amount);
 
   void setName(const std::string& name);
@@ -22,4 +24,5 @@ class Product {
   std::string getDescription() const;
   double getPrice() const;
   unsigned long long getAmount() const;
+  unsigned long long getId() const;
 };
