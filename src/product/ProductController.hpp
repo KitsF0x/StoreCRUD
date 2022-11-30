@@ -20,4 +20,6 @@ class ProductController {
   std::string getProductDescription() const;
   double getProductPrice() const;
   unsigned long long getProductAmount() const;
+
+  void printProductDetails();
 };

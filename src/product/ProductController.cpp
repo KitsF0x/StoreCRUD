@@ -34,3 +34,9 @@ double ProductController::getProductPrice() const {
 unsigned long long ProductController::getProductAmount() const {
   return m_product.getAmount();
 }
+
+// Other
+
+void ProductController::printProductDetails() {
+  m_productView.printProductDetails(m_product);
+}
