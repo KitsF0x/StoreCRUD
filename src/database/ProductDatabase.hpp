@@ -4,7 +4,7 @@
 
 #include "../product/Product.hpp"
 
-class Database {
+class ProductDatabase {
  private:
   std::vector<Product> m_products;
 
