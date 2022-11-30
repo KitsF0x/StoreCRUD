@@ -8,7 +8,7 @@ ProductDatabaseController::ProductDatabaseController(
 
 ProductController& ProductDatabaseController::getProductController(
     unsigned long long id) {
-  m_productDatabase.getProductControllerById(id);
+  return m_productDatabase.getProductControllerById(id);
 }
 
 void ProductDatabaseController::loadProductDatabaseFromFile(
