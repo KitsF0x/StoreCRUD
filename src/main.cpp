@@ -1,3 +1,3 @@
-#include "tests/ProductTests.hpp"
+#include "tests/productDatabaseTests.hpp"
 
-int main() { productTests(); }
+int main() { productDatabaseTests(); }
