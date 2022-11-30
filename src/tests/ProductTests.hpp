@@ -3,7 +3,7 @@
 #include "Test.hpp"
 
 void productTests() {
-  Product model{"Apple", "Red apple", 3.99, 99};
+  Product model{0, "Apple", "Red apple", 3.99, 99};
   ProductView view;
   ProductController controller{model, view};
   Test::EQU("productName", controller.getProductName(), "Apple");
