@@ -2,7 +2,7 @@
 #include "../product/ProductController.hpp"
 #include "Test.hpp"
 
-void productTests() {
+void productDatabaseTests() {
   Product model{0, "Apple", "Red apple", 3.99, 99};
   ProductView view;
   ProductController controller{model, view};
