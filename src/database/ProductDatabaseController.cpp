@@ -53,3 +53,8 @@ void ProductDatabaseController::loadProductDatabaseFromFile(
     const std::string& file) {
   //
 }
+
+void ProductDatabaseController::addProduct(
+    const ProductController& productController) {
+  m_productDatabase.add(productController);
+}
