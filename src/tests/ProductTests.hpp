@@ -6,9 +6,9 @@ void productTests() {
   Product model{0, "Apple", "Red apple", 3.99, 99};
   ProductView view;
   ProductController controller{model, view};
-  Test::EQU("productName", controller.getProductName(), "Apple");
-  Test::EQU("productDescription", controller.getProductDescription(),
+  Test::EQU("productControllerName", controller.getProductName(), "Apple");
+  Test::EQU("productControllerDescription", controller.getProductDescription(),
             "Red apple");
-  Test::EQU("productPrice", controller.getProductPrice(), 3.99);
-  Test::EQU("productAmount", controller.getProductAmount(), 99);
+  Test::EQU("productControllerPrice", controller.getProductPrice(), 3.99);
+  Test::EQU("productControllerAmount", controller.getProductAmount(), 99);
 }
