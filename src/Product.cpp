@@ -2,13 +2,6 @@
 
 // Constructors
 
-Product::Product() {
-  m_name = "UNNAMED";
-  m_description = "NONE";
-  m_price = 0;
-  m_amount = 0;
-}
-
 Product::Product(const std::string& name, const std::string& description,
                  double price, unsigned long long amount) {
   setName(name);

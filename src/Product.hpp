@@ -10,7 +10,6 @@ class Product {
   unsigned long long m_amount;
 
  public:
-  Product();
   Product(const std::string& name, const std::string& description, double price,
           unsigned long long amount);
 
