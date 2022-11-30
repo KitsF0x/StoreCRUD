@@ -11,6 +11,11 @@ ProductController& ProductDatabaseController::getProductControllerById(
   return m_productDatabase.getProductControllerById(id);
 }
 
+void ProductDatabaseController::add(
+    const ProductController& productController) {
+  m_productDatabase.add(productController);
+}
+
 void ProductDatabaseController::loadProductDatabaseFromFile(
     const std::string& file) {
   //
