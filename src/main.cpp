@@ -1,3 +1,7 @@
+#include "App.hpp"
 #include "tests/AllTests.hpp"
 
-int main() { runTests(); }
+int main() {
+  // runTests();
+  App app{};
+}
