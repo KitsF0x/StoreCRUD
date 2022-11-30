@@ -17,4 +17,16 @@ void productDatabaseControllerTest() {
       "productDatabaseControllerName",
       productDatabaseController.getProductControllerById(0).getProductName(),
       "Apple");
+  Test::EQU("productDatabaseControllerDescription",
+            productDatabaseController.getProductControllerById(0)
+                .getProductDescription(),
+            "Red apple from France");
+  Test::EQU(
+      "productDatabaseControllerPrice",
+      productDatabaseController.getProductControllerById(0).getProductPrice(),
+      2.49);
+  Test::EQU(
+      "productDatabaseControllerAmount",
+      productDatabaseController.getProductControllerById(0).getProductAmount(),
+      29);
 }
