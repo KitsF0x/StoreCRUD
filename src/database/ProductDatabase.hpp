@@ -19,6 +19,7 @@ class ProductDatabase {
   std::string getProductDescriptionById(unsigned long long id);
   double getProductPriceById(unsigned long long id);
   unsigned long long getProductAmountById(unsigned long long id);
+  unsigned long long getNumberOfProductsInDb();
 
   void add(const ProductController& productController);
 };

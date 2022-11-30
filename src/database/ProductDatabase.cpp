@@ -36,6 +36,10 @@ unsigned long long ProductDatabase::getProductAmountById(
   return m_products.at(id).getProductAmount();
 }
 
+unsigned long long ProductDatabase::getNumberOfProductsInDb() {
+  return m_products.size();
+}
+
 void ProductDatabase::add(const ProductController& productController) {
   m_products.push_back(productController);
 }
