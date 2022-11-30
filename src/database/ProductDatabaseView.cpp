@@ -1,20 +1,19 @@
 #include "ProductDatabaseView.hpp"
 
-void ProductDatabaseView::printProducts(const ProductDatabase& database) {
-  for (unsigned long long i = 0; i < database.getProducts().size(); i++) {
+void ProductDatabaseView::printProducts(ProductDatabase& database) {
+  for (unsigned long long i = 0; i < database.getNumberOfProductsInDb(); i++) {
     printProductById(database, i);
   }
 }
 
-void ProductDatabaseView::printProductById(const ProductDatabase& database,
+void ProductDatabaseView::printProductById(ProductDatabase& database,
                                            unsigned long long id) {
-  database.getProducts().at(id).printProductDetails();
+  database.getProductControllerById(id).printProductDetails();
 }
 
-void ProductDatabaseView::printDatabaseDetails(
-    const ProductDatabase& database) {
+void ProductDatabaseView::printDatabaseDetails(ProductDatabase& database) {
   std::cout << "=====";
-  std::cout << "NUmber of elements: " << database.getProducts().size()
+  std::cout << "Number of elements: " << database.getNumberOfProductsInDb()
             << std::endl;
   std::cout << "=====";
 }

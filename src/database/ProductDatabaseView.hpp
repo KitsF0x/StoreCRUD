@@ -3,7 +3,7 @@
 
 class ProductDatabaseView {
  public:
-  void printProducts(const ProductDatabase& database);
-  void printProductById(const ProductDatabase& database, unsigned long long id);
-  void printDatabaseDetails(const ProductDatabase& database);
+  void printProducts(ProductDatabase& database);
+  void printProductById(ProductDatabase& database, unsigned long long id);
+  void printDatabaseDetails(ProductDatabase& database);
 };
