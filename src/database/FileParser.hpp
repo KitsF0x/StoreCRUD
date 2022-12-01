@@ -3,7 +3,7 @@
 #include <sstream>
 #include <vector>
 
-#include "../product/ProductController.hpp"
+#include "../product/Product.hpp"
 
 class FileParser {
  private:

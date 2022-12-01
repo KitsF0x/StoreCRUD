@@ -1,4 +1,6 @@
 #include "App.hpp"
 
-App::App()
-    : m_productDatabaseController(m_productDatabase, m_productDatabaseView) {}
+App::App() {
+  m_productDatabaseSingleton->getInstance()->loadDatabaseFromFile(
+      "database.txt");
+}

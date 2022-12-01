@@ -1,12 +1,10 @@
 #pragma once
 
-#include "database/ProductDatabaseController.hpp"
+#include "database/ProductDatabaseSingleton.hpp"
 
 class App {
  private:
-  ProductDatabase m_productDatabase;
-  ProductDatabaseView m_productDatabaseView;
-  ProductDatabaseController m_productDatabaseController;
+  ProductDatabaseSingleton* m_productDatabaseSingleton;
 
  public:
   App();
