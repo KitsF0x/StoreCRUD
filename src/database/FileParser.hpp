@@ -11,4 +11,6 @@ class FileParser {
 
  public:
   std::vector<Product> getProductsFromFile(const std::string& filename);
+  void saveProductsToFile(const std::vector<Product> products,
+                          const std::string& filename);
 };

@@ -28,3 +28,16 @@ Product FileParser::getProductFromString(const std::string& str) {
   product.setAmount(std::stoull(tokens.at(4).c_str()));
   return product;
 }
+
+void FileParser::saveProductsToFile(const std::vector<Product> products,
+                                    const std::string& filename) {
+  std::fstream file{filename, std::ios::out};
+  std::string line;
+  for (auto& el : products) {
+    line = "?" + std::to_string(el.getId()) + "?" + el.getName() + "?" +
+           el.getDescription() + "?" + std::to_string(el.getPrice()) + "?" +
+           std::to_string(el.getAmount());
+
+    file << line;
+  }
+}

@@ -19,3 +19,7 @@ void ProductDatabaseSingleton::loadDatabaseFromFile(
     productView.printProductDetails(el);
   }
 }
+
+void ProductDatabaseSingleton::saveDatabaseToFile(const std::string& filename) {
+  m_fileParser.saveProductsToFile(m_products, filename);
+}

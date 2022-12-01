@@ -19,4 +19,5 @@ class ProductDatabaseSingleton {
   static ProductDatabaseSingleton* getInstance();
 
   void loadDatabaseFromFile(const std::string& filename);
+  void saveDatabaseToFile(const std::string& filename);
 };
