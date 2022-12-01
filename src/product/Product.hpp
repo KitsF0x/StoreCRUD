@@ -21,7 +21,6 @@ class Product {
   void setPrice(double price);
   void setAmount(unsigned long long amount);
 
-  unsigned long long getId() const;
   std::string getName() const;
   std::string getDescription() const;
   double getPrice() const;

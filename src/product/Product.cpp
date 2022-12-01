@@ -35,4 +35,3 @@ std::string Product::getName() const { return m_name; }
 std::string Product::getDescription() const { return m_description; }
 double Product::getPrice() const { return m_price; }
 unsigned long long Product::getAmount() const { return m_amount; }
-unsigned long long Product::getId() const { return m_id; }
