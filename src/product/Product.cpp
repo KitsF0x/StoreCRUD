@@ -2,6 +2,14 @@
 
 // Constructors
 
+Product::Product() {
+  m_id = 0;
+  setName("");
+  setDescription("");
+  setPrice(0);
+  setAmount(0);
+}
+
 Product::Product(unsigned long long id, const std::string& name,
                  const std::string& description, double price,
                  unsigned long long amount) {

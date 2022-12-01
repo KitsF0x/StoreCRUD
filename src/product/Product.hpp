@@ -11,6 +11,7 @@ class Product {
   unsigned long long m_id;
 
  public:
+ Product();
   Product(unsigned long long id, const std::string& name,
           const std::string& description, double price,
           unsigned long long amount);
