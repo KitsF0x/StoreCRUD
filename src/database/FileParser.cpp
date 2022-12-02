@@ -5,7 +5,7 @@ std::vector<Product> FileParser::getProductsFromFile(
   std::vector<Product> toReturn;
   std::fstream file{filename, std::ios::in};
   std::string temp;
-  unsigned long long id{0};
+  size_t id{0};
   while (std::getline(file, temp)) {
     toReturn.push_back(getProductFromString(temp));
   }

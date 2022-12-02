@@ -22,7 +22,7 @@ void ProductDatabaseSingleton::saveDatabaseToFile(const std::string& filename) {
 
 void ProductDatabaseSingleton::printAllProducts() {
   ProductView productView;
-  for (unsigned long long i = 0; i < m_products.size(); i++) {
+  for (size_t i = 0; i < m_products.size(); i++) {
     ProductController productController{m_products.at(i), productView};
     productController.printProductDetails();
   }
@@ -31,13 +31,13 @@ void ProductDatabaseSingleton::printAllProducts() {
 std::vector<Product> ProductDatabaseSingleton::getProducts() const {
   return m_products;
 }
-Product ProductDatabaseSingleton::getProductById(unsigned long long id) const {
+Product ProductDatabaseSingleton::getProductById(size_t id) const {
   return m_products.at(id);
 }
 void ProductDatabaseSingleton::updateProductById(const Product& product,
-                                                 unsigned long long id) {
+                                                 size_t id) {
   m_products.at(id) = product;
 }
-void ProductDatabaseSingleton::deleteProductById(unsigned long long id) {
+void ProductDatabaseSingleton::deleteProductById(size_t id) {
   m_products.erase(m_products.begin() + id);
 }

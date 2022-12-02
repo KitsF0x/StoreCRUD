@@ -21,17 +21,17 @@ Product::Product(unsigned long long id, const std::string& name,
 }
 
 // Setters
-void Product::setId(unsigned long long id) { m_id = id; }
+void Product::setId(size_t id) { m_id = id; }
 void Product::setName(const std::string& name) { m_name = name; }
 void Product::setDescription(const std::string& description) {
   m_description = description;
 }
 void Product::setPrice(double price) { m_price = price; }
-void Product::setAmount(unsigned long long amount) { m_amount = amount; }
+void Product::setAmount(size_t amount) { m_amount = amount; }
 
 // Getters
-unsigned long long Product::getId() const { return m_id; }
+size_t Product::getId() const { return m_id; }
 std::string Product::getName() const { return m_name; }
 std::string Product::getDescription() const { return m_description; }
 double Product::getPrice() const { return m_price; }
-unsigned long long Product::getAmount() const { return m_amount; }
+size_t Product::getAmount() const { return m_amount; }

@@ -14,13 +14,13 @@ class ProductController {
   void setProductName(const std::string& name);
   void setProductDescription(const std::string& description);
   void setProductPrice(double price);
-  void setProductAmount(unsigned long long amount);
+  void setProductAmount(size_t amount);
 
   std::string getProductName() const;
   std::string getProductDescription() const;
   double getProductPrice() const;
-  unsigned long long getProductAmount() const;
-  unsigned long long getProductId() const;
+  size_t getProductAmount() const;
+  size_t getProductId() const;
 
   void printProductDetails();
 };

@@ -16,7 +16,7 @@ void ProductController::setProductDescription(const std::string& description) {
 void ProductController::setProductPrice(double price) {
   m_product.setPrice(price);
 }
-void ProductController::setProductAmount(unsigned long long amount) {
+void ProductController::setProductAmount(size_t amount) {
   m_product.setAmount(amount);
 }
 
@@ -31,12 +31,10 @@ std::string ProductController::getProductDescription() const {
 double ProductController::getProductPrice() const {
   return m_product.getPrice();
 }
-unsigned long long ProductController::getProductAmount() const {
+size_t ProductController::getProductAmount() const {
   return m_product.getAmount();
 }
-unsigned long long ProductController::getProductId() const {
-  return m_product.getId();
-}
+size_t ProductController::getProductId() const { return m_product.getId(); }
 
 // Other
 

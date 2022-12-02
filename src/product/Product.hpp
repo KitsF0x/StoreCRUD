@@ -7,23 +7,22 @@ class Product {
   std::string m_name;
   std::string m_description;
   double m_price;
-  unsigned long long m_amount;
-  unsigned long long m_id;
+  size_t m_amount;
+  size_t m_id;
 
  public:
   Product();
-  Product(unsigned long long id, const std::string& name,
-          const std::string& description, double price,
-          unsigned long long amount);
-  void setId(unsigned long long id);
+  Product(size_t id, const std::string& name, const std::string& description,
+          double price, size_t amount);
+  void setId(size_t id);
   void setName(const std::string& name);
   void setDescription(const std::string& description);
   void setPrice(double price);
-  void setAmount(unsigned long long amount);
+  void setAmount(size_t amount);
 
   std::string getName() const;
   std::string getDescription() const;
   double getPrice() const;
-  unsigned long long getAmount() const;
-  unsigned long long getId() const;
+  size_t getAmount() const;
+  size_t getId() const;
 };

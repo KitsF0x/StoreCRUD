@@ -24,7 +24,7 @@ class ProductDatabaseSingleton {
   void printAllProducts();
 
   std::vector<Product> getProducts() const;
-  Product getProductById(unsigned long long id) const;
-  void updateProductById(const Product& product, unsigned long long id);
-  void deleteProductById(unsigned long long id);
+  Product getProductById(size_t id) const;
+  void updateProductById(const Product& product, size_t id);
+  void deleteProductById(size_t id);
 };
