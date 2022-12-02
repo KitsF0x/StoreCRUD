@@ -1,7 +1,8 @@
 #include "App.hpp"
 #include "tests/AllTests.hpp"
 
-int main() {
+IMPLEMENT_APP_NO_MAIN(App)
+int main(int argc, char **argv) {
   // runTests();
-  App app{};
+  return wxEntry(argc, argv);
 }

@@ -5,3 +5,9 @@ App::App() {
       "database.txt");
   m_productDatabaseSingleton->getInstance()->printAllProducts();
 }
+
+bool App::OnInit() {
+  MainFrame* mainFrame = new MainFrame();
+  mainFrame->Show();
+  return true;
+}
