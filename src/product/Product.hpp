@@ -11,8 +11,8 @@ class Product {
 
  public:
   Product();
-  Product(const std::string& name, const std::string& description,
-          double price, size_t amount);
+  Product(const std::string& name, const std::string& description, double price,
+          size_t amount);
   void setName(const std::string& name);
   void setDescription(const std::string& description);
   void setPrice(double price);

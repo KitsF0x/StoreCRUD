@@ -1,4 +1,7 @@
 #pragma once
+#include "DatabaseCrudTests.hpp"
 #include "ProductControllerTests.hpp"
-
-void runTests() { productControllerTests(); }
+void runTests() {
+  productControllerTests();
+  databaseCrudTests();
+}

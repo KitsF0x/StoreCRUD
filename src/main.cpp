@@ -2,6 +2,6 @@
 #include "tests/AllTests.hpp"
 
 int main() {
-  // runTests();
-  App app{};
+  runTests();
+  // App app{};
 }
