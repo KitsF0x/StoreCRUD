@@ -28,6 +28,10 @@ void ProductDatabaseSingleton::printAllProducts() {
   }
 }
 
+void ProductDatabaseSingleton::add(const Product& product) {
+  m_products.push_back(product);
+}
+
 std::vector<Product> ProductDatabaseSingleton::getProducts() const {
   return m_products;
 }
