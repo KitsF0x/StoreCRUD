@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "../product/Product.hpp"
+#include "../product/ProductController.hpp"
 #include "../product/ProductView.hpp"
 #include "FileParser.hpp"
 
@@ -20,4 +21,5 @@ class ProductDatabaseSingleton {
 
   void loadDatabaseFromFile(const std::string& filename);
   void saveDatabaseToFile(const std::string& filename);
+  void printAllProducts();
 };
