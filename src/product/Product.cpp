@@ -9,9 +9,8 @@ Product::Product() {
   setAmount(0);
 }
 
-Product::Product(const std::string& name,
-                 const std::string& description, double price,
-                 unsigned long long amount) {
+Product::Product(const std::string& name, const std::string& description,
+                 double price, size_t amount) {
   setName(name);
   setDescription(description);
   setPrice(price);
