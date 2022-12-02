@@ -27,3 +27,17 @@ void ProductDatabaseSingleton::printAllProducts() {
     productController.printProductDetails();
   }
 }
+
+std::vector<Product> ProductDatabaseSingleton::getProducts() const {
+  return m_products;
+}
+Product ProductDatabaseSingleton::getProductById(unsigned long long id) const {
+  return m_products.at(id);
+}
+void ProductDatabaseSingleton::updateProductById(const Product& product,
+                                                 unsigned long long id) {
+  m_products.at(id) = product;
+}
+void ProductDatabaseSingleton::deleteProductById(unsigned long long id) {
+  m_products.erase(m_products.begin() + id);
+}

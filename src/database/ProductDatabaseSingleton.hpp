@@ -22,4 +22,9 @@ class ProductDatabaseSingleton {
   void loadDatabaseFromFile(const std::string& filename);
   void saveDatabaseToFile(const std::string& filename);
   void printAllProducts();
+
+  std::vector<Product> getProducts() const;
+  Product getProductById(unsigned long long id) const;
+  void updateProductById(const Product& product, unsigned long long id);
+  void deleteProductById(unsigned long long id);
 };
