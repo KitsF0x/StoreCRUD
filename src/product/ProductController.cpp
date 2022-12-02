@@ -34,7 +34,6 @@ double ProductController::getProductPrice() const {
 size_t ProductController::getProductAmount() const {
   return m_product.getAmount();
 }
-size_t ProductController::getProductId() const { return m_product.getId(); }
 
 // Other
 
