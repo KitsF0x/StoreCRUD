@@ -1,6 +1,8 @@
+#pragma once
+
 #include <wx/wx.h>
 
-#pragma once
+#include "DataPanel.hpp"
 
 class MainFrame : public wxFrame {
  public:
