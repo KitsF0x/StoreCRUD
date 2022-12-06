@@ -33,9 +33,9 @@ void FileParser::saveProductsToFile(const std::vector<Product> products,
   std::fstream file{filename, std::ios::out};
   std::string line;
   for (auto& el : products) {
-    line = "?" + el.getName() + "?" + el.getDescription() + "?" +
+    line = el.getName() + "?" + el.getDescription() + "?" +
            std::to_string(el.getPrice()) + "?" + std::to_string(el.getAmount());
 
-    file << line;
+    file << line << '\n';
   }
 }
