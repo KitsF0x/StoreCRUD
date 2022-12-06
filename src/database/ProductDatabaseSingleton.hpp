@@ -12,6 +12,8 @@ class ProductDatabaseSingleton {
   std::vector<Product> m_products;
   static ProductDatabaseSingleton* m_instance;
   FileParser m_fileParser;
+  std::string m_lastDatabaseFilename;
+
   ProductDatabaseSingleton();
 
  public:
@@ -20,7 +22,7 @@ class ProductDatabaseSingleton {
   static ProductDatabaseSingleton* getInstance();
 
   void loadDatabaseFromFile(const std::string& filename);
-  void saveDatabaseToFile(const std::string& filename);
+  void saveDatabaseToFile();
   void printAllProducts();
 
   void add(const Product& product);

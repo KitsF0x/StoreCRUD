@@ -13,11 +13,12 @@ ProductDatabaseSingleton* ProductDatabaseSingleton::getInstance() {
 
 void ProductDatabaseSingleton::loadDatabaseFromFile(
     const std::string& filename) {
+  m_lastDatabaseFilename = filename;
   m_products = m_fileParser.getProductsFromFile(filename);
 }
 
-void ProductDatabaseSingleton::saveDatabaseToFile(const std::string& filename) {
-  m_fileParser.saveProductsToFile(m_products, filename);
+void ProductDatabaseSingleton::saveDatabaseToFile() {
+  m_fileParser.saveProductsToFile(m_products, m_lastDatabaseFilename);
 }
 
 void ProductDatabaseSingleton::printAllProducts() {
