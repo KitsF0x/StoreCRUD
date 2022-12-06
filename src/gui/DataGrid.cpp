@@ -1,7 +1,7 @@
 #include "DataGrid.hpp"
 
 DataGrid::DataGrid(wxWindow* parent)
-    : wxGrid{parent, 1, wxDefaultPosition, wxSize{1280, 500}} {
+    : wxGrid{parent, ID_DATAGRID_GRID, wxDefaultPosition, wxSize{1280, 500}} {
   updateGrid();
   initColsSizes();
 }

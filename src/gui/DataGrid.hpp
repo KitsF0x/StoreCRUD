@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "../database/ProductDatabaseSingleton.hpp"
+#include "../IDs.hpp"
 
 class DataGrid : public wxGrid {
  private:
