@@ -27,6 +27,30 @@ void DataGrid::updateGrid() {
 void DataGrid::processCellChange(wxGridEvent& event) {
   std::cout << event.GetCol() << " " << event.GetRow() << " "
             << event.GetString() << std::endl;
+
+  Product product =
+      ProductDatabaseSingleton::getInstance()->getProductById(event.GetRow());
+
+  std::string newString = event.GetString().ToStdString();
+  switch (event.GetCol()) {
+    case 0:
+      product.setName(newString);
+      break;
+    case 1:
+      product.setDescription(newString);
+      break;
+    case 2:
+      product.setPrice(std::atof(newString.c_str()));
+      break;
+    case 3:
+      product.setPrice(std::atof(newString.c_str()));
+      break;
+    default:
+      break;
+  }
+  ProductDatabaseSingleton::getInstance()->updateProductById(product,
+                                                             event.GetRow());
+  ProductDatabaseSingleton::getInstance()->saveDatabaseToFile();
 }
 
 void DataGrid::initColsSizes() {
