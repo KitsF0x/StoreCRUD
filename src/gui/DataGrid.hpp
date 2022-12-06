@@ -10,7 +10,10 @@
 class DataGrid : public wxGrid {
  private:
   void updateGrid();
+  void processCellChange(wxGridEvent& event);
 
  public:
   DataGrid(wxWindow* parent);
+
+  wxDECLARE_EVENT_TABLE();
 };

@@ -1,7 +1,7 @@
 #include "DataGrid.hpp"
 
 DataGrid::DataGrid(wxWindow* parent)
-    : wxGrid{parent, wxID_ANY, wxDefaultPosition, wxSize{1280, 500}} {
+    : wxGrid{parent, 1, wxDefaultPosition, wxSize{1280, 500}} {
   updateGrid();
 }
 
@@ -22,3 +22,12 @@ void DataGrid::updateGrid() {
     SetCellValue(i, 3, std::to_string(products.at(i).getAmount()));
   }
 }
+
+void DataGrid::processCellChange(wxGridEvent& event) {
+  std::cout << event.GetCol() << " " << event.GetRow() << " "
+            << event.GetString() << std::endl;
+}
+
+wxBEGIN_EVENT_TABLE(DataGrid, wxGrid)
+    EVT_GRID_CELL_CHANGING(DataGrid::processCellChange)  //
+    wxEND_EVENT_TABLE()                                  //
