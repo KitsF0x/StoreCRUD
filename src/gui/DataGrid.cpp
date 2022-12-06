@@ -50,7 +50,6 @@ void DataGrid::processCellChange(wxGridEvent& event) {
   }
   ProductDatabaseSingleton::getInstance()->updateProductById(product,
                                                              event.GetRow());
-  ProductDatabaseSingleton::getInstance()->saveDatabaseToFile();
 }
 
 void DataGrid::initColsSizes() {
