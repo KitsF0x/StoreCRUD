@@ -53,10 +53,10 @@ void DataGrid::processCellChange(wxGridEvent& event) {
 }
 
 void DataGrid::initColsSizes() {
-  SetColSize(0, 100);
-  SetColSize(1, 300);
-  SetColSize(2, 50);
-  SetColSize(3, 50);
+  SetColSize(0, 150);
+  SetColSize(1, 848);
+  SetColSize(2, 100);
+  SetColSize(3, 100);
 }
 
 wxBEGIN_EVENT_TABLE(DataGrid, wxGrid)
