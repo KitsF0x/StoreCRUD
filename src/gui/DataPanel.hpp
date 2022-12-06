@@ -5,7 +5,6 @@
 
 #include <vector>
 
-#include "../IDs.hpp"
 #include "DataGrid.hpp"
 
 class DataPanel : public wxPanel {
